@@ -1,0 +1,9 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    display: inline;
+    padding: 15px;
+}

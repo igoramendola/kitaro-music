@@ -1,4 +1,5 @@
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 
 const Navbar = () => {
@@ -7,13 +8,25 @@ const Navbar = () => {
             <div>
                 <img src={'./images/kitaro-music.png'} alt="logo" width={'190px'}/>
             </div>
-            <div>
-                <ul>
-                    <li>Single</li>
-                    <li>Album</li>
-                    <li>Live</li>
+            <nav>
+                <ul className='list-container'>
+                    <li>
+                        <Link to={'/category/single'} className='navbar-button'>
+                            Single
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/category/album'} className='navbar-button'>
+                            Album
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/category/live'} className='navbar-button'>
+                            Live
+                        </Link>
+                    </li>
                 </ul>
-            </div>
+            </nav>
             <div>
                 <CartWidget />
             </div>

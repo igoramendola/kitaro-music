@@ -1,6 +1,7 @@
 .navbar-container {
     display: flex;
     flex-direction: row;
+    background-color: cadetblue;
 }
 
 li {

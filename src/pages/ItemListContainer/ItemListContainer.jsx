@@ -9,7 +9,6 @@ const ItemListContainer = ({greeting}) => {
                 {greeting}
             </div>
             <div>
-                <ItemCount />
                 <ItemList />
             </div>
         </div>

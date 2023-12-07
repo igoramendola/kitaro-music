@@ -1,31 +1,31 @@
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 
 const Navbar = () => {
     return (
         <div className="navbar-container">
             <div>
-                <Link to={'/'}>
+                <NavLink to={'/'}>
                     <img src={'./images/kitaro-music.png'} alt="logo" width={'190px'}/>
-                </Link>
+                </NavLink>
             </div>
             <nav>
                 <ul className='list-container'>
                     <li>
-                        <Link to={'/category/electronics'} className='navbar-button'>
+                        <NavLink exact to={'/category/electronics'} className={(navData) => navData.isActive ? 'navbar-button navbar-button-active' : 'navbar-button'}>
                             Single
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to={'/category/jewelery'} className='navbar-button'>
+                        <NavLink exact to={'/category/jewelery'} className={(navData) => navData.isActive ? 'navbar-button navbar-button-active' : 'navbar-button'}>
                             Album
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to={"/category/men's-clothing"} className='navbar-button'>
+                        <NavLink exact to={"/category/men's-clothing"} className={(navData) => navData.isActive ? 'navbar-button navbar-button-active' : 'navbar-button'}>
                             Live
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>

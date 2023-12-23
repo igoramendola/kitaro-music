@@ -30,7 +30,9 @@ const Navbar = () => {
                 </ul>
             </nav>
             <div>
-                <CartWidget />
+                <NavLink exact to={"/cart"} className='navbar-button'>
+                    <CartWidget />
+                </NavLink>
             </div>
         </div>
     )

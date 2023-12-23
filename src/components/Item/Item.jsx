@@ -1,6 +1,6 @@
 import './Item.css';
 
-const Item = ({title, description, price, image}) => {
+const Item = ({title, description, price, image, quantity}) => {
     return (
         <div className='card-container'>
             <h6 className='card-title'>{title}</h6>
@@ -8,7 +8,11 @@ const Item = ({title, description, price, image}) => {
             <div className='card-description'>
                 <p>{description}</p>
             </div>
-            <p>${price}</p>
+            <p>
+                quantity: {quantity}
+                <br />
+                ${price}
+            </p>
         </div>
     );
 }

@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import CartContext from '../../context/CartContext';
 
 const ItemDetail = ({ itemSelected }) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
     const stock = 6;
     const navigate = useNavigate();
     const { addItem } = useContext(CartContext);
